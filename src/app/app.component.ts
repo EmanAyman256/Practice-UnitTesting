@@ -12,4 +12,8 @@ export class AppComponent {
   addParagraph() {
     this.showParagraph = true;
   }
+  multiply(a:number,b:number)
+  {
+    return a*b;
+  }
 }
