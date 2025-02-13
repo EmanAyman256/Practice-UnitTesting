@@ -15,13 +15,7 @@ describe('AppComponent', () => {
   component = fixture.componentInstance;
   fixture.detectChanges(); 
 });
-   it('should show multiplication',()=>{
-    const comp =new AppComponent();
-    const a=5;
-    const b=4;
-    const res=comp.multiply(a,b);
-    expect(res).toBe(20)
-   })
+ 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -33,7 +27,17 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('Practice-UnitTesting');
   });
-  //DOM TESTING
+
+  //!Function Testing
+  it('should show multiplication',()=>{
+    const comp =new AppComponent();
+    const a=5;
+    const b=4;
+    const res=comp.multiply(a,b);
+    expect(res).toBe(20)
+   })
+   
+  //!DOM TESTING
   it('should not show the paragraph initially', () => {
     const paragraph = fixture.debugElement.query(By.css('p'));
     expect(paragraph).toBeNull(); // Paragraph should not exist
